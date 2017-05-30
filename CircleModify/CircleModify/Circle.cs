@@ -23,7 +23,7 @@ namespace CircleModify
         {
             this.radiusOfCircle = this.radiusOfCircle + num;
             Console.WriteLine("New radius is {0}", radiusOfCircle);
-            Console.ReadKey();
+            Console.Readline();
         }
         public void SubtractFromRadius(double num)
         {

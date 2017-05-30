@@ -10,10 +10,13 @@ namespace CircleModify
     [TestFixture]
     public class CircleTest
     {
-        //[Test]
-        //public void AddToRadius()
-       // {
-           // CircleTest.
-        //}
+        [Test]
+        public void AddToRadiusTest()
+        {
+            Circle circletestobj1 = new Circle();
+            circletestobj1.radiusOfCircle = 10;
+            circletestobj1.AddToRadius(6);
+            Assert.AreEqual(16, circletestobj1.radiusOfCircle);
+        }
     }
 }
