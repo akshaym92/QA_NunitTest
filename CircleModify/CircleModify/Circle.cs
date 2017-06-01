@@ -10,41 +10,62 @@ namespace CircleModify
     {
         public const double pie= 3.14;
         public double radiusOfCircle { get; set; }
-        //default construtor
+       
         public Circle()
         {
         }
         public Circle(double radius)
         {
             this.radiusOfCircle = radius;
+            Console.WriteLine("Radius=" +this.radiusOfCircle);
+           
 
         }
         public  void AddToRadius(double num)
         {
             this.radiusOfCircle = this.radiusOfCircle + num;
-            Console.WriteLine("New radius is {0}", radiusOfCircle);
-            Console.Readline();
+            Console.WriteLine(" Radius is {0}", radiusOfCircle);
+            Console.WriteLine("Press a key to continue");
+            Console.ReadLine();
         }
         public void SubtractFromRadius(double num)
         {
-            this.radiusOfCircle = this.radiusOfCircle - num;
-            Console.WriteLine("New radius is {0}", radiusOfCircle);
-            Console.ReadKey();
+            this.radiusOfCircle = this.radiusOfCircle - (num);
+            Console.WriteLine("Radius is {0}", radiusOfCircle);
+            Console.WriteLine("Press a key to continue..");
+            Console.ReadLine();
 
         }
-        public void GetCircumference()
+        public double GetCircumference()
 
         {
-            double circumference = 2 * pie * radiusOfCircle;
-            Console.WriteLine("Circumference with given radius: {0}", circumference);
-            Console.ReadKey();
+            double circumference=0;
+            if (this.radiusOfCircle > 0)
+            {
+                circumference = 2 * pie * radiusOfCircle;
+                return circumference;
+            }
+            else
+                {
+                return circumference;
+
+            }
+          
 
         }
-        public void GetArea()
+        public double GetArea()
         {
-            double area = pie * radiusOfCircle * radiusOfCircle;
-            Console.WriteLine("Area with given radius: {0}", area);
-            Console.ReadKey();
+            double area=0;
+            if (this.radiusOfCircle > 0)
+            {
+                area = pie * radiusOfCircle * radiusOfCircle;
+                return area;
+            }
+            else
+            {
+                return area;
+            }
+           
 
         }
     }
