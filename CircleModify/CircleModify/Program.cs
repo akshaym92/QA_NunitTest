@@ -108,12 +108,15 @@ namespace CircleModify
                        
                             double circumference = circleObj1.GetCircumference();
                             Console.WriteLine("\nCircumference of the cirle is:" + circumference);
+                        Console.ReadLine();
+                        
                         
                        
                         break;
                     case 4:
                         double area = circleObj1.GetArea();
                         Console.WriteLine("\narea of the cirle is:" + area);
+                        Console.ReadLine();
 
                         break;
 
