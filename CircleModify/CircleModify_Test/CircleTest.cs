@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-
-namespace CircleModify
+using CircleModify;
+namespace CircleModify_Test
 {
     [TestFixture]
     public class CircleTest
@@ -13,9 +13,9 @@ namespace CircleModify
         [Test]
         public void Constructortest()
         {
-            
+
             Circle constructtestobj = new Circle(2);
-            
+
             Assert.AreEqual(2, constructtestobj.radiusOfCircle);
 
         }
@@ -29,7 +29,7 @@ namespace CircleModify
             Assert.AreEqual(16, Positiveradius.radiusOfCircle);
         }
         [Test]
-        public void AddToRadius_withnegetiveradius()
+        public void AddToRadius_withnegetiveradiusTest()
         {
             Circle negativeradius = new Circle();
             negativeradius.radiusOfCircle = 2;
@@ -57,13 +57,13 @@ namespace CircleModify
             Assert.AreEqual(-4, negativerad.radiusOfCircle);
         }
         [Test]
-       
+
         public void GetCircumference_postiveradius()
         {
             Circle circletestobj1 = new Circle();
             circletestobj1.radiusOfCircle = 3;
             circletestobj1.GetCircumference();
-            Assert.AreEqual(18.84,circletestobj1.GetCircumference());
+            Assert.AreEqual(18.84, circletestobj1.GetCircumference());
         }
         [Test]
         public void GetCircumference_negetiveradius()
@@ -80,25 +80,20 @@ namespace CircleModify
             Circle circletestobj3 = new Circle();
             circletestobj3.radiusOfCircle = 2;
             circletestobj3.GetArea();
-            Assert.AreEqual(12.56,circletestobj3.GetArea());
+            Assert.AreEqual(12.56, circletestobj3.GetArea());
         }
-      [Test]
-      public void GetAreaTest_negetiveradius()
+        [Test]
+        public void GetAreaTest_negetiveradius()
         {
             Circle circletestobj4 = new Circle();
             circletestobj4.radiusOfCircle = -2;
             circletestobj4.GetArea();
             Assert.AreEqual(0, circletestobj4.GetArea());
 
-              
+
         }
 
 
 
+    }
 }
-}
-       
-
-    
-
-

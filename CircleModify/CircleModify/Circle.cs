@@ -10,10 +10,11 @@ namespace CircleModify
     {
         public const double pie= 3.14;
         public double radiusOfCircle { get; set; }
-       
+       //Default Constructor
         public Circle()
         {
         }
+        //non-default Constructor
         public Circle(double radius)
         {
             this.radiusOfCircle = radius;
@@ -21,6 +22,7 @@ namespace CircleModify
            
 
         }
+        //Function to add radius
         public  void AddToRadius(double num)
         {
             this.radiusOfCircle = this.radiusOfCircle + num;
@@ -28,6 +30,7 @@ namespace CircleModify
             Console.WriteLine("Press a key to continue");
             Console.ReadLine();
         }
+        //Function to subract from the given radius
         public void SubtractFromRadius(double num)
         {
             this.radiusOfCircle = this.radiusOfCircle - (num);
@@ -36,6 +39,7 @@ namespace CircleModify
             Console.ReadLine();
 
         }
+        //Function to calculate circumfrence from given radius
         public double GetCircumference()
 
         {
@@ -53,6 +57,7 @@ namespace CircleModify
           
 
         }
+        //Function to calculate area from given radius
         public double GetArea()
         {
             double area=0;
